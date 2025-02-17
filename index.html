@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> FORMULARIO </title>
+    <style>
+        body {
+            background-color: #97afe0;
+            color: rgba(237, 243, 247, 0.948);
+            text-align: center;
+            overflow-x: hidden;
+            font-size: 25px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        input {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 23px;
+        }
+        #footer {
+            color: rgb(0, 0, 0);
+        }
+        #content {
+            position: absolute;
+            top: 40%;
+            left: 38%;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="conteudoFixo"></div>
+        <label for="name"> Digite seu nome: </label>
+        <input type="text" id="name" placeholder="Nome">
+        <br>
+        <br>
+        <label for="footer" id="footer"> Seu nome aparecera aqui! </label>
+    </div>
+    <script>
+        const nameInput = document.getElementById('name');
+        const footer = document.getElementById('footer');
+        nameInput.addEventListener('input', () => {
+            footer.textContent = nameInput.value || 'Seu nome aparecera aqui!'
+        });
+    </script>
+</body>
+</html>
